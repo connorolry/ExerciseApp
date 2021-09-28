@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>no framework</title>
+    <title>Exercise App about</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
+<!--requires database to display user entereed activity log-->
+
 <body>
     <div class="container">
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-              </a>
+              <figure class="image is-128x128">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyBmOhc9nSCAb-48QPYiO6iB2KOsTngBEpoQ&usqp=CAU">
+              </figure>
           
               <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{ 'is-active': navBarIsActive}" @click="navBarIsActive = !navBarIsActive">
                 <span aria-hidden="true"></span>
@@ -25,12 +29,19 @@
           
             <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': navBarIsActive}">
               <div class="navbar-start">
-                <a class="navbar-item">
-                  Home
+                <a class="navbar-item" href="index.html">
+                  <div class="icon"><i class="fas fa-home"></i></div>
+                   -Home
                 </a>
           
-                <a class="navbar-item">
-                  Documentation
+                <a class="navbar-item" href="about.html">
+                  <div class="icon"><i class="fas fa-book"></i></div>
+                  -About
+                </a>
+
+                <a class="navbar-item" href="tracker.html">
+                  <div class="icon"><i class="fas fa-dumbbell"></i></div>
+                    -Start Tracking
                 </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -39,12 +50,6 @@
                   </a>
           
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                      About
-                    </a>
-                    <a class="navbar-item">
-                      Jobs
-                    </a>
                     <a class="navbar-item">
                       Contact
                     </a>
@@ -59,11 +64,11 @@
               <div class="navbar-end">
                 <div class="navbar-item">
                   <div class="buttons">
-                    <a class="button is-primary">
+                    <a class="button is-info" href="signup.html">
                       <strong>Sign up</strong>
                     </a>
-                    <a class="button is-light">
-                      Log in
+                    <a class="button is-light" href="login.html">
+                      <strong>Log in</strong>
                     </a>
                   </div>
                 </div>
@@ -71,32 +76,22 @@
             </div>
           </nav>
         <h1 class="title">
-          Hello World
+          Exercise Tracker
         </h1>
         <p class="subtitle">
-          My first website with <strong>Bulma</strong> {{  `${now} `}}
+          Catalouge you workout
         </p>
 
-        <article class="message is-primary" :class="{'is-hidden' : !visible}">
-          <div class="message-header" :style=" `font-size: ${counter}px`" @click="grow()">
-              <p>Primary</p>
+        <article class="message is-info" :class="{'is-hidden' : !visible}">
+          <div class="message-header"> 
+              <p>Welcome to the info page</p>
               <button class="delete" aria-label="delete" @click="close()"></button>
             </div>
             <div class="message-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+              this page will display the guide
             </div>
           </article>
-
-          <article class="message is-warning">
-            <div class="message-header">
-              <p>Hello World</p>
-              <button class="delete" aria-label="delete"></button>
-            </div>
-            <div class="message-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-            </div>
-          </article>
-
+        <p>(Description paragraph)</p>
       </div>
       <script src="https://unpkg.com/vue@next"></script>
       <script>
