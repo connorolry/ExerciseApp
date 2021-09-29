@@ -12,7 +12,7 @@
 <!--requires database to display user entereed activity log-->
 
 <body>
-    <div class="container">
+    <div class="container is-fluid">
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -43,6 +43,11 @@
                   <div class="icon"><i class="fas fa-dumbbell"></i></div>
                     -Start Tracking
                 </a>
+
+                <a class="navbar-item" href="profile.html">
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                      -Profile
+                  </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
@@ -68,13 +73,15 @@
                       <strong>Sign up</strong>
                     </a>
                     <a class="button is-light" href="login.html">
-                      <strong>Log in</strong>
+                      <strong>Login</strong>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </nav>
+        </div>
+        <div class="container">
         <h1 class="title">
           Exercise Tracker
         </h1>
@@ -92,7 +99,30 @@
             </div>
           </article>
 
-      </div>
+       </div>
+       <div class="container">
+        <div class="tabs is-centered">
+          <ul>
+            <li><a>Read</a></li>
+            <li><a>Create</a></li>
+            <li><a>Update</a></li>
+            <li><a>Delete</a></li>
+          </ul>
+         </div>
+       </div>
+       
+       <div class="container">
+        <table class="table is-bordered">
+          <thead>
+            <tr>
+              <th>Exercise</th>
+              <th>Duration</th>
+              <th>Date</th>
+            </tr>
+          </thead>         
+        </table>
+       </div>
+      
       <script src="https://unpkg.com/vue@next"></script>
       <script>
 

@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
+<!--requires database to display user profile info-->
+
 <body>
-  <div class="container is-fluid">
+    <div class="container is-fluid">
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -62,7 +65,7 @@
                   </div>
                 </div>
               </div>
-          
+
               <div class="navbar-end">
                 <div class="navbar-item">
                   <div class="buttons">
@@ -78,8 +81,7 @@
             </div>
           </nav>
         </div>
-
-        <div class="container">
+    <div class="container"> 
         <h1 class="title">
           Exercise Tracker
         </h1>
@@ -89,16 +91,15 @@
 
         <article class="message is-info" :class="{'is-hidden' : !visible}">
           <div class="message-header"> 
-              <p>Welcome to your Exercise tracker</p>
+              <p>Welcome to the user profile page</p>
               <button class="delete" aria-label="delete" @click="close()"></button>
             </div>
             <div class="message-body">
               Be sure to login or if it's you first time here  <a href="signup.html">create an account</a>
             </div>
-        </article>
-      </div>
-      
+          </article>
 
+      </div>
       <script src="https://unpkg.com/vue@next"></script>
       <script>
 
