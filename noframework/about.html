@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise App tracker</title>
+    <title>Exercise App about</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
@@ -12,7 +12,7 @@
 <!--requires database to display user entereed activity log-->
 
 <body>
-    <div class="container is-fluid">
+  <div class="container is-fluid">
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -45,9 +45,14 @@
                 </a>
 
                 <a class="navbar-item" href="profile.html">
-                    <div class="icon"><i class="fas fa-user"></i></div>
-                      -Profile
-                  </a>
+                  <div class="icon"><i class="fas fa-user"></i></div>
+                    -Profile
+                </a>
+
+                <a class="navbar-item" href="friends.html">
+                  <div class="icon"><i class="fas fa-users"></i></div>
+                    -Friends
+                </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
@@ -80,7 +85,8 @@
               </div>
             </div>
           </nav>
-        </div>
+        </div> 
+
         <div class="container">
         <h1 class="title">
           Exercise Tracker
@@ -91,52 +97,18 @@
 
         <article class="message is-info" :class="{'is-hidden' : !visible}">
           <div class="message-header"> 
-              <p>Welcome to you exercise log</p>
+              <p>Welcome to the info page</p>
               <button class="delete" aria-label="delete" @click="close()"></button>
             </div>
             <div class="message-body">
-              this page will display the users activity log
+              this page will display the guide
             </div>
           </article>
-
-       </div>
-       <div class="container">
-        <div class="tabs is-centered">
-          <ul>
-            <li><a>Read</a></li>
-            <li><a>Create</a></li>
-          </ul>
-         </div>
-       </div>
-       
-       <div class="container">
-        <table class="table is-bordered">
-          <thead>
-            <tr>
-              <th>Exercise</th>
-              <th>Duration</th>
-              <th>Calories</th>
-              <th>Weight</th>
-              <th>Date</th>
-              <th>Update</th>
-              <th>Delete</th>
-            </tr>
-          </thead> 
-          
-          <tbody>
-            <tr>
-              <td>Runnning</td>
-              <td>30 min</td>
-              <td>500 cal</td>
-              <td>140 pds</td>
-              <td>1/1/2022</td>
-              <td><a href="update.html"><div class="icon"><i class="fas fa-edit"></i></a></div></td>
-              <td><a href="delete"><div class="icon"><i class="fas fa-trash"></i></div></a></td>
-            </tr>
-          </tbody>
-        </table>
-       </div>
+        <p>A simple fitness tracker website that will allow you to catalouge your workout and track the calories you burn. Create a profile to connect with your friends and share your progress.</p>
+        <figure><img src="http://media.bizj.us/view/img/10072378/howtogym*1200xx2715-1527-0-142.jpg" alt=""></figure>
+      </div>
       
+
       <script src="https://unpkg.com/vue@next"></script>
       <script>
 

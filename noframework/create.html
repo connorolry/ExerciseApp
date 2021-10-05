@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise App home</title>
+    <title>Exercise App tracker</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
+<!--requires database to display user entereed activity log-->
+
 <body>
-  <div class="container is-fluid">
+    <div class="container is-fluid">
 
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -42,9 +45,14 @@
                 </a>
 
                 <a class="navbar-item" href="profile.html">
-                  <div class="icon"><i class="fas fa-user"></i></div>
-                    -Profile
-                </a>
+                    <div class="icon"><i class="fas fa-user"></i></div>
+                      -Profile
+                  </a>
+
+                  <a class="navbar-item" href="friends.html">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                      -Friends
+                  </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
@@ -78,7 +86,6 @@
             </div>
           </nav>
         </div>
-
         <div class="container">
         <h1 class="title">
           Exercise Tracker
@@ -89,15 +96,63 @@
 
         <article class="message is-info" :class="{'is-hidden' : !visible}">
           <div class="message-header"> 
-              <p>Welcome to your Exercise tracker</p>
+              <p>Welcome to you exercise log</p>
               <button class="delete" aria-label="delete" @click="close()"></button>
             </div>
             <div class="message-body">
-              Be sure to login or if it's you first time here  <a href="signup.html">create an account</a>
+              this page will display the users activity log
             </div>
-        </article>
-      </div>
-      
+          </article>
+
+       </div>
+       <div class="container">
+        <div class="tabs is-centered">
+          <ul>
+            <li><a>Read</a></li>
+            <li><a href="create.html">Create</a></li>
+          </ul>
+         </div>
+       </div>
+       
+       <div class="container">
+           <h1> <b>Create entry</b></h1>
+        <br>
+        <div class="field">
+            <label class="label">Exercise</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Exercise">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Duration</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Duration">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Calories</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Calories">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Weight</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Weight">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Date</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Date">
+            </div>
+        </div>
+        <br><br>
+       </div>
+
 
       <script src="https://unpkg.com/vue@next"></script>
       <script>
