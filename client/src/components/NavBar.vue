@@ -18,22 +18,22 @@
               <div class="navbar-start">
                 <a class="navbar-item">
                   <div class="icon"><i class="fas fa-home"></i></div>
-                  <router-link to="/" class="navbar-item">-Home</router-link>
+                  <router-link to="/" class="navbar-item is-tab">-Home</router-link>
                 </a>
           
                 <a class="navbar-item">
                   <div class="icon"><i class="fas fa-book"></i></div>
-                  <router-link to="/about" class="nabar-item">-About</router-link>
+                  <router-link to="/about" class="navbar-item">-About</router-link>
                 </a>
 
                 <a class="navbar-item">
                   <div class="icon"><i class="fas fa-dumbbell"></i></div>
-                    <router-link to="/tracker" class="nabar-item">-Start Tracking</router-link>
+                    <router-link to="/tracker" class="navbar-item">-Start Tracking</router-link>
                 </a>
 
                 <a class="navbar-item" href="profile.html">
                   <div class="icon"><i class="fas fa-user"></i></div>
-                    -Profile
+                    <router-link to="/profile" class="navbar-item">-Profile</router-link>
                 </a>
 
                 <a class="navbar-item" href="friends.html">

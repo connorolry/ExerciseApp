@@ -4,8 +4,9 @@ import About from '../views/About.vue'
 import Tracker from '../views/Tracker.vue'
 import SignUp from '../views/SignUp.vue'
 import Login from '../views/Login.vue'
+import Profile from '../views/Profile.vue'
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'Home',
@@ -18,20 +19,20 @@ const routes = [
   },
   {
     path: '/tracker',
-    name: 'Tracker',
     component: Tracker
   },
   {
-    path: '/login',
-    name: 'Login',
-    Component: Login
-    
+    path: '/sign-up',
+    component: SignUp
   },
   {
-    path: '/sign-up',
-    name: 'SignUp',
-    Component: SignUp
+    path: '/login',
+    component: Login
   },
+  {
+    path: '/profile',
+    component: Profile
+  }
   
 
 ]

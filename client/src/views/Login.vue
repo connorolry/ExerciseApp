@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="hero is-info is-fullheight">
+      <section class="hero is-info is-fullheight">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
@@ -52,11 +52,10 @@
 
 <script>
 export default {
-  name: 'login',
-  components: {
+    name: 'Login',
+    components: {
 
-  }
-
+    }
 }
 </script>
 

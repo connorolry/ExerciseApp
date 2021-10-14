@@ -4,10 +4,10 @@
                   <div class="buttons">
 
                     <router-link to="/login" class="button is-info">
-                      <strong>Sign up</strong>
+                      <strong>Login</strong>
                     </router-link>
                     <router-link to="/sign-up" class="button is-light">
-                      <strong>Login</strong>
+                      <strong>Sign Up</strong>
                     </router-link>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 <template>
-  <div><section class="hero is-info is-fullheight">
+    <section class="hero is-info is-fullheight">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-centered">
@@ -46,7 +46,7 @@
       </div>
     </div>
   </section>
-  </div>
+
 </template>
 
 <script>
