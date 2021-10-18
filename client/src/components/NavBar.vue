@@ -31,14 +31,14 @@
                     <router-link to="/tracker" class="navbar-item">-Start Tracking</router-link>
                 </a>
 
-                <a class="navbar-item" href="profile.html">
+                <a class="navbar-item">
                   <div class="icon"><i class="fas fa-user"></i></div>
                     <router-link to="/profile" class="navbar-item">-Profile</router-link>
                 </a>
 
                 <a class="navbar-item" href="friends.html">
                   <div class="icon"><i class="fas fa-users"></i></div>
-                    -Friends
+                    <router-link to="/profile">-Friends</router-link>
                 </a>
           
                 <div class="navbar-item has-dropdown is-hoverable">
