@@ -16,30 +16,28 @@
           
             <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': navBarIsActive}">
               <div class="navbar-start">
-                <a class="navbar-item">
-                  <div class="icon"><i class="fas fa-home"></i></div>
-                  <router-link to="/" class="navbar-item is-tab">-Home</router-link>
-                </a>
-          
-                <a class="navbar-item">
-                  <div class="icon"><i class="fas fa-book"></i></div>
-                  <router-link to="/about" class="navbar-item">-About</router-link>
-                </a>
+  
+                  <router-link to="/" class="navbar-item is" active-class="active">
+                  <div class="icon"><i class="fas fa-home"></i></div>-Home
+                  </router-link>
+                
+                  <router-link to="/about" class="navbar-item" active-class="active">
+                  <div class="icon"><i class="fas fa-book"></i></div>-About
+                  </router-link>
 
-                <a class="navbar-item">
-                  <div class="icon"><i class="fas fa-dumbbell"></i></div>
-                    <router-link to="/tracker" class="navbar-item">-Start Tracking</router-link>
-                </a>
+                  <router-link to="/tracker" class="navbar-item" active-class="active">
+                  <div class="icon"><i class="fas fa-dumbbell"></i></div>-Start Tracking
+                  </router-link>
 
-                <a class="navbar-item">
-                  <div class="icon"><i class="fas fa-user"></i></div>
-                    <router-link to="/profile" class="navbar-item">-Profile</router-link>
-                </a>
+                  <router-link to="/profile" class="navbar-item" active-class="active">    
+                   <div class="icon"><i class="fas fa-user"></i></div>-Profile
+                  </router-link>
+                
 
-                <a class="navbar-item" href="friends.html">
-                  <div class="icon"><i class="fas fa-users"></i></div>
-                    <router-link to="/profile">-Friends</router-link>
-                </a>
+                  <router-link to="/feed" class="navbar-item" active-class="active">
+                  <div class="icon"><i class="fas fa-users" ></i></div>-Friends
+                  </router-link>
+
           
                 <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">

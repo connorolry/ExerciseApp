@@ -5,6 +5,7 @@ import Tracker from '../views/Tracker.vue'
 import SignUp from '../views/SignUp.vue'
 import Login from '../views/Login.vue'
 import Profile from '../views/Profile.vue'
+import Feed from '../views/Feed.vue'
 
 export const routes = [
   {
@@ -32,6 +33,10 @@ export const routes = [
   {
     path: '/profile',
     component: Profile
+  },
+  {
+    path:'/feed',
+    component: Feed
   }
   
 
