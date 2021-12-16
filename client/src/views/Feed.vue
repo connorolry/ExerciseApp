@@ -1,83 +1,69 @@
 <template>
-  <div class="section">
-      <h1 class="title"> Feed Page </h1>
-      
-      <div class="columns">
+    <div class="about">
+        <h1 class="title">Users Page</h1>
+        <h2 class="subtitle">Should be accesible only to admins</h2>
 
-          <!--
-          <div class="column">
-              <div class="card">
-                  <div class="card-content">
-                      {{newPost}}
-                  </div>
-              </div>
-          </div>
-            -->
-        <div class="column is-half is-offset-one-quarter">
+        <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Handle</th>
+                    <th>Profile Pic</th>
+                    <th>isAdmin</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
 
-            <post-edit :new-post="newPost" @add="add()" />
-
-            <div class="post" v-for=" (p, i) in posts" :key="p.src">
-                <post :post="p" @remove="remove(p, i)" />
-            </div>
-
-        </div>
-
-        <div class="column">
-            <post :post="newPost" />
-        </div>
-      </div>
-
-
-  </div>
+            <tbody>
+                <tr v-for="u in list" :key="u.handle">
+                    <th>{{ u.firstName }}</th>
+                    <th>{{ u.lastName }}</th>
+                    <td>{{ u.handle }}</td>
+                    <td>
+                        <img :src="u.pic" width="50" :alt="u.handle" />
+                    </td>
+                    <td>{{ u.isAdmin }}</td>
+                    <td>
+                        <a href="">Emails</a> <br />
+                        <a href="">Friends</a>
+                    </td>
+                    <td>
+                        <p class="buttons">
+                            <button class="button">
+                                <span class="icon is-small">
+                                    <i class="fas fa-eye"></i>
+                                </span>
+                            </button>
+                            <button class="button">
+                                <span class="icon is-small">
+                                    <i class="fas fa-edit"></i>
+                                </span>
+                            </button>
+                            <button class="button">
+                                <span class="icon is-small">
+                                    <i class="fas fa-trash"></i>
+                                </span>
+                            </button>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </template>
 
-<script>
-import Post from '../components/Post.vue';
-import session from "../services/session";
-import { Add, Delete, GetFeed } from "../services/posts";
-import PostEdit from "../components/Post-edit.vue";
-
-const newPost = ()=> ({ user: session.user, user_handle: session.user.handle })
+<script>import {  GetAll } from "../services/users"
 
 export default {
-    name: 'Feed',
-    components: {
-        Post,
-        PostEdit
-    },
-    data: ()=> ({
-        posts: [],
-        newPost: newPost()
-    }),
-    async mounted(){
-        this.posts = await GetFeed(session.user.handle)
-    },
-    methods: {
-        async remove(post, i){
-            console.log({post})
-            const response = await Delete(post._id)
-            if(response.deleted){
-                this.posts.splice(i, 1)
-            }
-        },
-        async add(){
-            console.log("Adding new post at " + new Date())
-            const response = await Add(this.newPost);
-            console.log({ response });
-
-            if(response){
-                this.posts.unshift(response);
-                this.newPost = newPost();
-            }
+    data() {
+        return {
+            list: []
         }
+    },
+    async mounted(){
+        this.list = await GetAll();
     }
 }
-
 </script>
-
-<style>
-    .card {
-        margin-bottom: 10px;
-    }
-</style>

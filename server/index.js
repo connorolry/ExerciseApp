@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 
 app
     .use('/', express.static(path.join(__dirname, '../docs')) )
-
+    
     .use(express.json())
     .use('/users', usersController )
     .use('/posts', postsController)
@@ -28,7 +28,9 @@ app
         console.error(err);
         res.status(err.code || 500).send(err);
     })
-
+    app.use((req, res, next) => {
+        res.header("Access-Control-Allow-Origin", "*")
+      }) 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

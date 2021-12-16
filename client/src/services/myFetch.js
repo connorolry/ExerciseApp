@@ -3,7 +3,7 @@
 
 import session from "./session";
 
-const API_ROOT = process.env.VUE_APP_API_ROOT ?? 'http://localhost:3200/';
+const API_ROOT = process.env.VUE_APP_API_ROOT ?? 'http://localhost:3100/';
 
 export async function api(url, data = null, method = null){
     try {

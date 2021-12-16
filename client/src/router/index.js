@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Session from '../services/session'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Tracker from '../views/Tracker.vue'
@@ -36,7 +37,8 @@ export const routes = [
   },
   {
     path:'/feed',
-    component: Feed
+    component: Feed,
+    meta: { requiresLogin: true }
   }
   
 
@@ -46,5 +48,13 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+router.beforeEach((to, from, next) => {
+  if(to.meta.requiresLogin && !Session.user){
+      next('/login');
+  }else{
+      next();
+  }
+} )
 
 export default router

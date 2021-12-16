@@ -67,6 +67,12 @@
 <script>
 import LoginBadge from './LoginBadge.vue'
 export default {
+
+  data(){
+    return{
+      isActive: false
+    }
+  },
   components: { LoginBadge },
 
 }
